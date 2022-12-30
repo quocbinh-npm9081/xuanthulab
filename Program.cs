@@ -1,13 +1,18 @@
-﻿namespace XuanThuLab
+﻿using System.Text;
+
+namespace XuanThuLab
 {
+    //http://gyanendushekhar.com/2016/05/01/string-and-stringbuilder-csharp/
     class Program{
-        static  void Main(string[] args){
-        Console.WriteLine("What is your name?");
-        var name = Console.ReadLine();
-        var currentDate = DateTime.Now;
-        Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-        Console.Write($"{Environment.NewLine}Press any key to exit...");
-        Console.ReadKey(true);
+        static void Main(string[] args){
+            string thongbao1; // <== viet cach nay se khong toi ua bi nho  vi string luu tren heap  no se lien tuc tao doi tuong roi gan lai value
+            thongbao1 = "xin";
+            thongbao1 = "Cac ban";
+
+            StringBuilder thongao2 = new StringBuilder(); //<== stringBuilder chi lam viec voi 1 doi tuong duy nhat
+            thongao2.Append("Xin");
+            thongao2.Append("Chao cac banj");
+
         }
     }
 }
