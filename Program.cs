@@ -1,13 +1,21 @@
-﻿namespace XuanThuLab
+﻿//biểu thức Lamda có nghĩa là anonimos function( phương thức không tên)
+using System;
+using System.Linq;
+namespace XuanThuLab
 {
     class Program{
-        static  void Main(string[] args){
-        Console.WriteLine("What is your name?");
-        var name = Console.ReadLine();
-        var currentDate = DateTime.Now;
-        Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-        Console.Write($"{Environment.NewLine}Press any key to exit...");
-        Console.ReadKey(true);
+        static void Main(string[] args){
+            Action<string> thongbao=(string s)=> Console.WriteLine(s); // Action<string> thongbao  <=> delegate void thongbao(string s);
+            thongbao.Invoke("Xin chao Lamda");
+            int[] numbers = {1,2,3,4,5,6};
+            var result = numbers.Select(
+                (int x) => {
+                    return x+1;
+                }
+            );
+            foreach(var kq in result){
+                Console.WriteLine(kq);
+            }
         }
     }
 }
