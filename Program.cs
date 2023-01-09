@@ -1,13 +1,16 @@
 ﻿namespace XuanThuLab
 {
+    //extenstion menthods
+    static class Abc {
+        public static void Print(this string s, ConsoleColor color){
+            Console.ForegroundColor = color;
+            Console.WriteLine(s);
+        }
+    }
     class Program{
-        static  void Main(string[] args){
-        Console.WriteLine("What is your name?");
-        var name = Console.ReadLine();
-        var currentDate = DateTime.Now;
-        Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-        Console.Write($"{Environment.NewLine}Press any key to exit...");
-        Console.ReadKey(true);
+        static void Main(string[] args){
+            string s = "Xin Chao Cac Ban";
+            s.Print(ConsoleColor.DarkBlue);
         }
     }
 }
