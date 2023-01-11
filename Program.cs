@@ -1,13 +1,30 @@
-﻿namespace XuanThuLab
+﻿using System;
+using Newtonsoft.Json;
+namespace XuanThuLab
 {
+
     class Program{
-        static  void Main(string[] args){
-        Console.WriteLine("What is your name?");
-        var name = Console.ReadLine();
-        var currentDate = DateTime.Now;
-        Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-        Console.Write($"{Environment.NewLine}Press any key to exit...");
-        Console.ReadKey(true);
+        class Product{
+            public string Name {set; get;}
+            public DateTime Expiry {set; get;}
+            public string[] Sizes {set; get;}
+        }
+        static void Main(string[] args){
+            Product product = new Product();
+            product.Name = "Apple";
+            product.Expiry = new DateTime(2008, 12, 28);
+            product.Sizes = new string[] { "Small" };
+
+            string json = JsonConvert.SerializeObject(product);
+            // {
+            //   "Name": "Apple",
+            //   "Expiry": "2008-12-28T00:00:00",
+            //   "Sizes": [
+            //     "Small"
+            //   ]
+            // }
+            Console.WriteLine(json);
+
         }
     }
 }

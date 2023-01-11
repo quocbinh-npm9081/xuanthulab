@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Cc+hPvJURmZm+rVZGtYSlSX4ODN6FHiBxf98PgWvUamTo3dntZUxg0pJRXLnl+3eervesPoXjb6QSNP9ubxd5w==",
+  "dgSpecHash": "U5Jl75J8OHjkb3+x9o3xzbwQogsBO/wLEStD/SoCTrigh8KY8S86KM6r/OCpbLfqn5L1qOtMHESkEJBj5b8jYg==",
   "success": true,
-  "projectFilePath": "D:\\C#\\C#.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\tutorial\\c#\\xuanthulab\\C#.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ACER\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
